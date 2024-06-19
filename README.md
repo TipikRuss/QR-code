@@ -1,2 +1,53 @@
-# QR-code
-otsenka raboti
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Service</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .rating {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .stars {
+            display: flex;
+        }
+        .stars input {
+            display: none;
+        }
+        .stars label {
+            font-size: 2em;
+            color: #ddd;
+            cursor: pointer;
+        }
+        .stars input:checked ~ label {
+            color: #f5b301;
+        }
+        .stars input:checked ~ label:hover,
+        .stars input:checked ~ label:hover ~ label {
+            color: #ffcc33;
+        }
+    </style>
+</head>
+<body>
+    <div class="rating">
+        <h1>Rate Our Service</h1>
+        <div class="stars">
+            <input type="radio" name="star" id="star1"><label for="star1">&#9733;</label>
+            <input type="radio" name="star" id="star2"><label for="star2">&#9733;</label>
+            <input type="radio" name="star" id="star3"><label for="star3">&#9733;</label>
+            <input type="radio" name="star" id="star4"><label for="star4">&#9733;</label>
+            <input type="radio" name="star" id="star5"><label for="star5">&#9733;</label>
+        </div>
+    </div>
+</body>
+</html>
